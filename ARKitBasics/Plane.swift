@@ -1,5 +1,5 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+See the LICENSE.txt file for this sample’s licensing information.
 
 Abstract:
 Convenience class for visualizing Plane extent and geometry
@@ -17,8 +17,7 @@ class Plane: SCNNode {
     let meshNode: SCNNode
     let extentNode: SCNNode
     var classificationNode: SCNNode?
-    
-    /// - Tag: VisualizePlane
+
     init(anchor: ARPlaneAnchor, in sceneView: ARSCNView) {
         
         #if targetEnvironment(simulator)
@@ -39,7 +38,7 @@ class Plane: SCNNode {
         // `SCNPlane` is vertically oriented in its local coordinate space, so
         // rotate it to match the orientation of `ARPlaneAnchor`.
         extentNode.eulerAngles.x = -.pi / 2
-
+        
         super.init()
 
         self.setupMeshVisualStyle()
@@ -102,7 +101,7 @@ class Plane: SCNNode {
 
         let textNode = SCNNode(geometry: textGeometry)
         // scale down the size of the text
-        textNode.simdScale = float3(0.0005)
+        textNode.simdScale = SIMD3<Float>(repeating: 0.0005)
         
         return textNode
     }

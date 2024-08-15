@@ -1,5 +1,5 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+See the LICENSE.txt file for this sample’s licensing information.
 
 Abstract:
 Main view controller for the AR experience.
@@ -48,7 +48,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
 
     // MARK: - ARSCNViewDelegate
     
-    /// - Tag: PlaceARContent
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         // Place content only for anchors found by plane detection.
         guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
@@ -61,7 +60,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         node.addChildNode(plane)
     }
 
-    /// - Tag: UpdateARContent
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         // Update only anchors and nodes set up by `renderer(_:didAdd:for:)`.
         guard let planeAnchor = anchor as? ARPlaneAnchor,
