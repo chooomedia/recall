@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		112FE5671F4F95A200BF85EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 112FE5661F4F95A200BF85EA /* Assets.xcassets */; };
+		251BCD8D2D73846F00640998 /* DebugManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251BCD8C2D73846900640998 /* DebugManager.swift */; };
+		251BCD8F2D73847700640998 /* RecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251BCD8E2D73847500640998 /* RecordManager.swift */; };
+		251BCD912D73849100640998 /* BoundingBoxNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251BCD902D73848D00640998 /* BoundingBoxNode.swift */; };
+		251BCD932D7384BB00640998 /* ControlKnob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251BCD922D7384B200640998 /* ControlKnob.swift */; };
+		251BCD952D7384C600640998 /* KnobDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251BCD942D7384C100640998 /* KnobDetector.swift */; };
+		251BCD972D7384CF00640998 /* KnobVisualizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251BCD962D7384CE00640998 /* KnobVisualizationManager.swift */; };
 		25CCB1212D727CCC001BF80F /* ObjectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CCB1202D727CC7001BF80F /* ObjectNode.swift */; };
 		5C028ED021029E1000C7AB1E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C028ECF21029E1000C7AB1E /* Utilities.swift */; };
 		5C16677F20E6E21D00B25B7E /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C16677E20E6E21D00B25B7E /* Plane.swift */; };
@@ -20,6 +26,12 @@
 
 /* Begin PBXFileReference section */
 		112FE5661F4F95A200BF85EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		251BCD8C2D73846900640998 /* DebugManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugManager.swift; sourceTree = "<group>"; };
+		251BCD8E2D73847500640998 /* RecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordManager.swift; sourceTree = "<group>"; };
+		251BCD902D73848D00640998 /* BoundingBoxNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBoxNode.swift; sourceTree = "<group>"; };
+		251BCD922D7384B200640998 /* ControlKnob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlKnob.swift; sourceTree = "<group>"; };
+		251BCD942D7384C100640998 /* KnobDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobDetector.swift; sourceTree = "<group>"; };
+		251BCD962D7384CE00640998 /* KnobVisualizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobVisualizationManager.swift; sourceTree = "<group>"; };
 		25CCB1202D727CC7001BF80F /* ObjectNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectNode.swift; sourceTree = "<group>"; };
 		50653F8CF1E63AFE1133E22B /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		5C028ECF21029E1000C7AB1E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -55,6 +67,52 @@
 			path = .;
 			sourceTree = "<group>";
 		};
+		251BCD872D73842700640998 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				842316E31F2030C300D189D1 /* ViewController.swift */,
+				842316DF1F2030C300D189D1 /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		251BCD882D73843000640998 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				251BCD8E2D73847500640998 /* RecordManager.swift */,
+				251BCD8C2D73846900640998 /* DebugManager.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		251BCD892D73843600640998 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				251BCD902D73848D00640998 /* BoundingBoxNode.swift */,
+				5C16677E20E6E21D00B25B7E /* Plane.swift */,
+				25CCB1202D727CC7001BF80F /* ObjectNode.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		251BCD8A2D73843D00640998 /* KnobTracking */ = {
+			isa = PBXGroup;
+			children = (
+				251BCD962D7384CE00640998 /* KnobVisualizationManager.swift */,
+				251BCD942D7384C100640998 /* KnobDetector.swift */,
+				251BCD922D7384B200640998 /* ControlKnob.swift */,
+			);
+			path = KnobTracking;
+			sourceTree = "<group>";
+		};
+		251BCD8B2D73844400640998 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5C028ECF21029E1000C7AB1E /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		842316D31F2030C300D189D1 = {
 			isa = PBXGroup;
 			children = (
@@ -77,11 +135,11 @@
 		842316DE1F2030C300D189D1 /* ARKitBasics */ = {
 			isa = PBXGroup;
 			children = (
-				25CCB1202D727CC7001BF80F /* ObjectNode.swift */,
-				842316E31F2030C300D189D1 /* ViewController.swift */,
-				5C16677E20E6E21D00B25B7E /* Plane.swift */,
-				5C028ECF21029E1000C7AB1E /* Utilities.swift */,
-				842316DF1F2030C300D189D1 /* AppDelegate.swift */,
+				251BCD8B2D73844400640998 /* Utilities */,
+				251BCD8A2D73843D00640998 /* KnobTracking */,
+				251BCD892D73843600640998 /* AR */,
+				251BCD882D73843000640998 /* UI */,
+				251BCD872D73842700640998 /* Main */,
 				842316E51F2030C300D189D1 /* Main.storyboard */,
 				842316EA1F2030C300D189D1 /* LaunchScreen.storyboard */,
 				842316ED1F2030C300D189D1 /* Info.plist */,
@@ -174,9 +232,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				842316E41F2030C300D189D1 /* ViewController.swift in Sources */,
+				251BCD952D7384C600640998 /* KnobDetector.swift in Sources */,
+				251BCD8D2D73846F00640998 /* DebugManager.swift in Sources */,
 				5C16677F20E6E21D00B25B7E /* Plane.swift in Sources */,
 				842316E01F2030C300D189D1 /* AppDelegate.swift in Sources */,
+				251BCD972D7384CF00640998 /* KnobVisualizationManager.swift in Sources */,
+				251BCD932D7384BB00640998 /* ControlKnob.swift in Sources */,
+				251BCD912D73849100640998 /* BoundingBoxNode.swift in Sources */,
 				5C028ED021029E1000C7AB1E /* Utilities.swift in Sources */,
+				251BCD8F2D73847700640998 /* RecordManager.swift in Sources */,
 				25CCB1212D727CCC001BF80F /* ObjectNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
