@@ -1,11 +1,3 @@
-//
-//  RecordManager.swift
-//  ARKitBasics
-//
-//  Created by Christopher Matt on 01.03.25.
-//  Copyright © 2025 Apple. All rights reserved.
-//
-
 import UIKit
 import AVFoundation
 
@@ -80,7 +72,7 @@ class RecordManager {
     
     // MARK: - Action Methods
     
-    @objc private func toggleRecordMode() {
+    @objc public func toggleRecordMode() {
         isRecording = !isRecording
         
         if isRecording {

@@ -1,10 +1,3 @@
-/*
-See the LICENSE.txt file for this sample's licensing information.
-
-Abstract:
-Main view controller for the AR experience with record mode functionality.
-*/
-
 import UIKit
 import SceneKit
 import ARKit
@@ -340,7 +333,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate,
     
     // MARK: - Helper Methods
     
-    private func showMessage(_ message: String) {
+    func showMessage(_ message: String) {
         // Create alert controller
         let alertController = UIAlertController(
             title: nil,
@@ -578,6 +571,27 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate,
         debugManager.logMessage("Hand interaction detected, new value: \(newValue)")
     }
     
+    func didCompleteRecording(knobs: [ControlKnob]) {
+        debugManager.logMessage("Recording complete! Detected \(knobs.count) knobs")
+        
+        // Show a success message
+        showMessage("Recording complete! Found \(knobs.count) controls.")
+        
+        // Disable recording mode if needed
+        if recordManager.isRecording {
+            recordManager.toggleRecordMode()
+        }
+    }
+    
+    func didEncounterError(_ error: Error) {
+        debugManager.logMessage("Error in knob detection: \(error.localizedDescription)")
+        
+        // Only show error messages when in recording mode
+        if recordManager.isRecording {
+            showMessage("Detection error: \(error.localizedDescription)")
+        }
+    }
+    
     // MARK: - KnobVisualizationDelegate
     
     func knobAdjustedToTargetValue(knob: ControlKnob) {
@@ -588,5 +602,15 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate,
         // Show message
         let knobTypeString = knob.type == .potentiometer ? "Potentiometer" : "Fader"
         debugManager.logMessage("\(knobTypeString) adjusted to target value!")
+    }
+
+    func completedAllKnobAdjustments() {
+        // Diese Methode musst du noch hinzufügen
+        debugManager.logMessage("All knobs adjusted correctly!")
+        
+        // Optional: Zeige eine Erfolgsmeldung an
+        showMessage("All controls adjusted correctly!")
+        
+        // Optional: Weitere Aktionen wie Speichern der Konfiguration, etc.
     }
 }
